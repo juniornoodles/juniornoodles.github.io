@@ -2,12 +2,19 @@ p {
   text-align: center;
   color: red;
 }
+body{
+  background: blue;
+  font-family: Arial;
+}
 #header{
   color: green;
 }
 .about {
 text-align: center;
   color: blue;
+}
+.projects{
+  background: #00b3d1;
 }
 .left {
   text-align: left;
