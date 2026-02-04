@@ -9,3 +9,12 @@ p {
 text-align: center;
   color: blue;
 }
+.left {
+  text-align: left;
+}
+.green {
+  color: green;
+}
+.attention {
+  font-weight: bold;
+}
