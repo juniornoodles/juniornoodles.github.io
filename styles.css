@@ -3,7 +3,7 @@ p {
   color: red;
 }
 body{
-  background: blue;
+  background: white;
   font-family: Arial;
 }
 #header{
@@ -12,9 +12,6 @@ body{
 .about {
 text-align: center;
   color: blue;
-}
-.projects{
-  background: #00b3d1;
 }
 .left {
   text-align: left;
