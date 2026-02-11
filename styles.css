@@ -6,8 +6,11 @@ body{
   background: white;
   font-family: Arial;
 }
-header{
+h1{
   color: green;
+  text-align: center;
+}
+h2{
   text-align: center;
 }
 .about {
