@@ -1,19 +1,75 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>CSCE 190: Junior</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <h1>Junior</h1>
-     <div class="about"><h2>About me</h2><p>I am intrested in embedded systems, hardware design, and digitl deisgn. I want to
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Template 1</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Junior's Portfolio Website</h1>
+  </header>
+  <nav>
+    <button class="tab-btn active" onclick="openTab(event, 'about')">About Me</button>
+    <button class="tab-btn" onclick="openTab(event, 'skills')">Skills</button>
+    <button class="tab-btn" onclick="openTab(event, 'projects')">Highlighted Projects</button>
+    <button class="tab-btn" onclick="openTab(event, 'contact')">Contact me!</button>
+  </nav>
+
+  <main>
+    <section id="about" class="active">
+      <h2>About Me</h2>
+      <div class="profile-layout">
+        <img src="files/profile.png" alt="Profile Picture">
+        <div>
+          <p>Hello! Welcome to my personal portfolio. My name is Junior, a Freshman Computer Engineer at UOFSC. I love
+            learning and finding new ways to innovate technology. I am intrested in embedded systems, hardware design, and digitl deisgn. I want to
      design hardware and then program the hardware into a functional machine. I am also intrested in building computer systems 
      and chips. My goal after my undergrad is to get a masters degree and then work for a hardware company like Nvida, Intel, or Tesla.
-     I am also intrested in starting my own buisness where I create a hardware based product.</p></div>
-     <div class="skills green attention"><h2>Skills</h2><p>none</p></div>
-     <div class="projects"><h2>Highlighted projects</h2><p>cpu</p></div>
-     <div class="contact"><h2>Contact me</h2><p>dont</p></div>
+     I am also intrested in starting my own buisness where I create a hardware based product.
+          </p>
+          <a href="files/resume.pdf" target="_blank">Check out my resume for more information!</a>
+          <!-- _blank opens in a new tab -->
+        </div>
+      </div>
+    </section>
 
+    <section id="skills">
+      <h2>Skills</h2>
+      <p><strong>Coding Proficiencies:</strong> Java, Python, System Verilog</p>
+      <p><strong>Additional Skills:</strong>Computer Archetecure, PCB Design</p>
+    </section>
+
+    <section id="projects">
+      <h2>Highlighted Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3><a href="#">Video game console</a></h3>
+          <a href="#"><img src="files/project1.png" alt="Project 1"></a>
+          <p>Built a video game console from sratch. Designed 32 bit 5 stage pipelined cpu with forwarding, stalling, flushing, and branch
+          prediction. Programed an assembler for my cpu. Designed pixel buffer and VGA controller to display images on the monitor. Programmed 
+          snake tic tac toe and pong in my assembly language.</p>
+        </div>
+        <div class="project-card">
+          <h3><a href="#">Custom microcontroller board</a></h3>
+          <a href="#"><img src="files/project2.png" alt="Project 2"></a>
+          <p>Designed a custom micro controller board for a prof for his robotics class and his operating systems class</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact me!</h2>
+      <div class="contact-links">
+        <a href="https://linkedin.com">LinkedIn: Chris Junior Tchapmou</a>
+        <a href="https://github.com">Github: juniornoodles</a>
+        <a href="mailto:email@email.com">Email: juniortchapmou@gmail.com</a>
+      </div>
+    </section>
      <div class = "problem">
   <!-- Problem Statement Assignment -->
       <section class="problem">
@@ -55,3 +111,28 @@
 
   </body>
 </html>  
+
+  </main>
+
+  <script>
+    // JavaScript to handle the tab switching
+    function openTab(evt, tabName) {
+      let i, sections, tablinks;
+
+      sections = document.getElementsByTagName("section");
+      for (i = 0; i < sections.length; i++) {
+        sections[i].classList.remove("active");
+      }
+
+      tablinks = document.getElementsByClassName("tab-btn");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active");
+      }
+
+      document.getElementById(tabName).classList.add("active");
+      evt.currentTarget.classList.add("active");
+    }
+  </script>
+</body>
+
+</html>
